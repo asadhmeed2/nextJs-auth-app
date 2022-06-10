@@ -6,4 +6,4 @@ const user = process.env.MONGODB_USER!
 const password = process.env.MONGODB_PASSWORD!
 
 
-export const databaseConfig = new mongodb.MongoClient(url , {auth: {username:user,password}})
+export const databaseClient = new mongodb.MongoClient(url , {auth: {username:user,password}})
