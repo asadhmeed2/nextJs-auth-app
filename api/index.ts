@@ -1,6 +1,7 @@
 import cookieParser from "cookie-parser";
 import cors from "cors"
 import  express  from "express";
+import { databaseConfig } from "./detabase";
 
 import userRouter from './routes/user.route'
 
@@ -19,4 +20,10 @@ app.use("/user",userRouter)
 
 
 
-app.listen(3000)
+async function main(){
+    await databaseConfig.connect()
+
+    app.listen(3000)
+}
+
+main()
