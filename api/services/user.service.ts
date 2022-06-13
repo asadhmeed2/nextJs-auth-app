@@ -27,5 +27,5 @@ export async function createUser(name:string,gitHubUserId:number){
 
 export async function getUserByGitHubId(gitHubUserId:number){
     const coll = await collection()
-    return coll.findOne({gitHubUserId: gitHubUserId.toString()})
+    return coll.findOne({gitHubUserId: gitHubUserId.toString()}) 
 }
