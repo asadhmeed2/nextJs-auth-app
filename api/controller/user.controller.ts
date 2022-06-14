@@ -8,6 +8,7 @@ const githubFunc = async (req : Request, res : Response) => {
     let user = await getUserByGitHubId(gitHubUser.id);
     if(!user) user = await createUser(gitHubUser.name,gitHubUser.id) 
     
+    
 }
 
 const refreshHandler = async (req : Request, res : Response) => {
